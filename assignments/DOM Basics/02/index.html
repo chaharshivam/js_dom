@@ -45,8 +45,25 @@
     <h2>Query Selector All</h2>
     <div class="demo-query-all">Access me by query all (1)</div>
     <div class="demo-query-all">Access me by query all (2)</div>
-    <script>
-      // your code goes here
+    
+    <script type="text/javascript">
+     let demo = document.getElementById('demo');
+
+     demo.style.border = "2px solid purple";
+
+     let allDemo = document.getElementsByClassName('demo');
+
+     [...allDemo].forEach( (elm) => elm.style.border = "2px solid orange");
+
+     let articles = document.getElementsByTagName('article');
+
+     [...articles].forEach( (elm) => elm.style.border = "2px solid blue");
+
+     let demoQuery = document.querySelector('#demo-query');
+     demoQuery.style.border = "2px solid grey";
+
+     let demoQueryAll = document.querySelectorAll('.demo-query-all');
+     [...demoQueryAll].forEach( (elm) => elm.style.border = "2px solid green" );
     </script>
   </body>
 </html>
