@@ -38,6 +38,19 @@
     const h1 = document.getElementsByTagName("h1")[0];
     const p = document.getElementsByTagName("p")[0];
     const ul = document.getElementsByTagName("ul")[0];
-    // Your code goes here
+    
+    ul.firstElementChild.style.background = 'red';
+
+    const allLi = document.getElementsByTagName('li');
+
+    [...allLi].forEach( (elm) => elm.style.background = "orange" );
+
+    allLi[allLi.length - 1].style.background = "hotpink";
+
+    const middleLi = allLi[ Math.floor(allLi.length / 2) ];
+
+    middleLi.nextElementSibling.style.background = 'aquamarine';
+    middleLi.previousElementSibling.style.background = 'coral';
+
   </script>
 </html>
