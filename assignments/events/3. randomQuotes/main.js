@@ -1,8 +1,6 @@
+document.body.style.fontFamily = "Arial, sans-serif";
+
 var quotes;
-
-// Write your code here
-
-
 
 quotes = [
     {
@@ -314,3 +312,20 @@ quotes = [
         "quoteText": "Great talent finds happiness in execution."
     }
 ];
+
+
+let quoteBox = document.querySelector('blockquote');
+let quoteAuthor = document.querySelector('.author');
+
+let random = Math.floor( Math.random() * quotes.length );
+quoteBox.innerText = `"${quotes[random].quoteText}"`;
+quoteAuthor.innerText = `- ${quotes[random].quoteAuthor}`;
+
+document.addEventListener('keydown', (event) => {
+    if(event.which == 32) {
+        random = Math.floor( Math.random() * quotes.length );
+        quoteBox.innerText = `"${quotes[random].quoteText}"`;
+        quoteAuthor.innerText = `- ${quotes[random].quoteAuthor}`;
+    }
+});
+
