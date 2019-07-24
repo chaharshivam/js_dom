@@ -1,0 +1,38 @@
+*::before, *, *::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 16px;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-size: 1.5rem;
+	background: #A2CBE8;
+}
+
+h1 {
+	font-size: 2.75rem;
+	margin-bottom: 3rem;
+	color: #122B35;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+}
+
+blockquote {
+	color: #1B4353;
+	font-style: oblique;
+}
+
+.author {
+	color: #1B4353;
+	font-style: oblique;
+}
